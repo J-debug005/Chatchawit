@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | นายชัชวิทย์ อังคนานิธินันท์ (Chatchawit Aungkananitininan)</title>
+    
+    <!-- Google Fonts: Prompt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS (Animate On Scroll) CSS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            200: '#fbcfe8',
+                            300: '#f9a8d4',
+                            400: '#f472b6',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            700: '#be185d',
+                            800: '#9d174d',
+                            900: '#831843',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #f472b6;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #db2777;
+        }
+
+        /* Glassmorphism Utilities */
+        .glass {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .dark .glass {
+            background: rgba(15, 23, 42, 0.75);
+        }
+
+        /* Hover Card Lift */
+        .card-hover {
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(236, 72, 153, 0.15), 0 8px 10px -6px rgba(236, 72, 153, 0.1);
+        }
+        .dark .card-hover:hover {
+            box-shadow: 0 20px 25px -5px rgba(244, 114, 182, 0.2), 0 8px 10px -6px rgba(244, 114, 182, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-pink-50/40 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased selection:bg-pink-500 selection:text-white transition-colors duration-300 overflow-x-hidden">
+
+    <!-- Scroll Progress Bar -->
+    <div class="fixed top-0 left-0 w-full h-1.5 z-50 bg-pink-100 dark:bg-slate-800">
+        <div id="scroll-progress" class="h-full bg-gradient-to-r from-pink-400 via-pink-500 to-rose-500 w-0 transition-all duration-150"></div>
+    </div>
+
+    <!-- 1. Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-40 glass border-b border-pink-100/80 dark:border-slate-800/80 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-500 to-rose-600 text-white font-bold text-xl flex items-center justify-center shadow-lg shadow-pink-500/30 group-hover:scale-105 transition-transform">
+                        J
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-lg tracking-tight text-slate-900 dark:text-white leading-none">Chatchawit</span>
+                        <span class="text-[11px] font-medium text-pink-600 dark:text-pink-400 tracking-wider uppercase mt-0.5">TCAS Portfolio</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-7 text-sm font-medium">
+                    <a href="#about" class="text-slate-600 hover:text-pink-600 dark:text-slate-300 dark:hover:text-pink-400 transition-colors">เกี่ยวกับฉัน</a>
+                    <a href="#skills" class="text-slate-600 hover:text-pink-600 dark:text-slate-300 dark:hover:text-pink-400 transition-colors">ทักษะ</a>
+                    <a href="#projects" class="text-slate-600 hover:text-pink-600 dark:text-slate-300 dark:hover:text-pink-400 transition-colors">ผลงานเด่น</a>
+                    <a href="#activities" class="text-slate-600 hover:text-pink-600 dark:text-slate-300 dark:hover:text-pink-400 transition-colors">กิจกรรม</a>
+                    <a href="#certificates" class="text-slate-600 hover:text-pink-600 dark:text-slate-300 dark:hover:text-pink-400 transition-colors">เกียรติบัตร</a>
+                    <a href="#contact" class="text-slate-600 hover:text-pink-600 dark:text-slate-300 dark:hover:text-pink-400 transition-colors">ติดต่อ</a>
+                </nav>
+
+                <!-- Right Actions: Dark Mode Toggle & Mobile Menu Button -->
+                <div class="flex items-center gap-3">
+                    <button id="theme-toggle" aria-label="Toggle Dark Mode" class="w-10 h-10 rounded-full bg-pink-100/80 dark:bg-slate-800 text-pink-600 dark:text-pink-400 flex items-center justify-center hover:bg-pink-200 dark:hover:bg-slate-700 transition-colors">
+                        <i id="theme-icon" class="fa-solid fa-moon text-base"></i>
+                    </button>
+
+                    <button id="mobile-menu-btn" aria-label="Open Menu" class="md:hidden w-10 h-10 rounded-xl bg-white dark:bg-slate-800 border border-pink-100 dark:border-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center">
+                        <i class="fa-solid fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-pink-100 dark:border-slate-800 px-4 pt-2 pb-6 space-y-2 shadow-xl">
+            <a href="#about" class="mobile-link block px-4 py-2.5 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-pink-50 dark:hover:bg-slate-800 hover:text-pink-600">เกี่ยวกับฉัน (About Me)</a>
+            <a href="#skills" class="mobile-link block px-4 py-2.5 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-pink-50 dark:hover:bg-slate-800 hover:text-pink-600">ทักษะและความสามารถ (Skills)</a>
+            <a href="#projects" class="mobile-link block px-4 py-2.5 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-pink-50 dark:hover:bg-slate-800 hover:text-pink-600">โครงงานและผลงาน (Projects)</a>
+            <a href="#activities" class="mobile-link block px-4 py-2.5 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-pink-50 dark:hover:bg-slate-800 hover:text-pink-600">กิจกรรมและภาวะผู้นำ (Activities)</a>
+            <a href="#certificates" class="mobile-link block px-4 py-2.5 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-pink-50 dark:hover:bg-slate-800 hover:text-pink-600">เกียรติบัตรและรางวัล (Certificates)</a>
+            <a href="#contact" class="mobile-link block px-4 py-2.5 rounded-xl text-base font-medium text-pink-600 dark:text-pink-400 bg-pink-50/70 dark:bg-slate-800">ติดต่อสอบถาม (Contact)</a>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section id="hero" class="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+        <!-- Decorative Background Blobs -->
+        <div class="absolute top-20 -left-20 w-72 h-72 bg-pink-300/30 dark:bg-pink-600/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 -right-20 w-96 h-96 bg-rose-300/30 dark:bg-rose-600/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 text-center lg:text-left" data-aos="fade-right">
+                    <!-- Status Badge -->
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-pink-200 dark:border-pink-500/30 shadow-sm mb-6">
+                        <span class="relative flex h-2.5 w-2.5">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-pink-500"></span>
+                        </span>
+                        <span class="text-xs sm:text-sm font-semibold text-pink-600 dark:text-pink-400 tracking-wide">
+                            Ready for University / TCAS
+                        </span>
+                    </div>
+
+                    <!-- Education Level & School -->
+                    <p class="text-sm sm:text-base font-medium text-slate-600 dark:text-slate-300 mb-2">
+                        นักเรียนชั้นมัธยมศึกษาปีที่ 5 • แผนการเรียน วิทย์-คณิต • โรงเรียนวัดไร่ขิง
+                    </p>
+
+                    <!-- Name -->
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white tracking-tight leading-tight mb-2">
+                        นายชัชวิทย์ <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-600">อังคนานิธินันท์</span>
+                    </h1>
+                    <p class="text-base sm:text-xl font-semibold text-slate-400 dark:text-slate-500 tracking-widest uppercase mb-5">
+                        CHATCHAWIT AUNGKANANITINAN
+                    </p>
+
+                    <!-- Target Faculty & Career Path -->
+                    <div class="bg-white/80 dark:bg-slate-900/80 border border-pink-100 dark:border-slate-800 rounded-2xl p-4 sm:p-5 mb-6 shadow-sm inline-block lg:block">
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-sm sm:text-base">
+                            <div class="flex items-center justify-center lg:justify-start gap-2 text-pink-600 dark:text-pink-400 font-semibold">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <span>คณะเป้าหมาย:</span>
+                            </div>
+                            <span class="font-medium text-slate-800 dark:text-slate-200">
+                                คณะกายภาพบำบัด สาขากายภาพบำบัด (มุ่งสู่สายอาชีพด้านสุขภาพระดับสากล/ต่างประเทศ)
+                            </span>
+                        </div>
+                        <p class="text-sm italic text-slate-500 dark:text-slate-400 mt-2 border-t border-pink-50 dark:border-slate-800 pt-2">
+                            <i class="fa-solid fa-quote-left text-pink-400 mr-1.5"></i>
+                            Learning through curiosity.
+                        </p>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10">
+                        <a href="https://drive.google.com/?authuser=0" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white font-semibold shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 transition-all transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-file-pdf text-lg"></i>
+                            <span>ดาวน์โหลด Portfolio (PDF)</span>
+                        </a>
+                        <a href="tel:0803939439" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-white dark:bg-slate-900 text-slate-800 dark:text-white border border-pink-200 dark:border-slate-700 hover:border-pink-400 dark:hover:border-pink-500 font-semibold shadow-sm transition-all transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-phone text-pink-500"></i>
+                            <span>ติดต่อ: 080-393-9439</span>
+                        </a>
+                    </div>
+
+                    <!-- 3 Stats Bar -->
+                    <div class="grid grid-cols-3 gap-3 sm:gap-6 max-w-xl mx-auto lg:mx-0">
+                        <div class="bg-white dark:bg-slate-900/90 border border-pink-100 dark:border-slate-800 rounded-2xl p-4 text-center shadow-sm card-hover">
+                            <div class="text-2xl sm:text-3xl font-bold text-pink-600 dark:text-pink-400">3.85</div>
+                            <div class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium mt-1">เกรดเฉลี่ยสะสม (GPAX)</div>
+                        </div>
+                        <div class="bg-white dark:bg-slate-900/90 border border-pink-100 dark:border-slate-800 rounded-2xl p-4 text-center shadow-sm card-hover">
+                            <div class="text-2xl sm:text-3xl font-bold text-pink-600 dark:text-pink-400">110</div>
+                            <div class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium mt-1">โครงงาน / การแข่งขัน</div>
+                        </div>
+                        <div class="bg-white dark:bg-slate-900/90 border border-pink-100 dark:border-slate-800 rounded-2xl p-4 text-center shadow-sm card-hover">
+                            <div class="text-2xl sm:text-3xl font-bold text-pink-600 dark:text-pink-400">400+</div>
+                            <div class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium mt-1">ชั่วโมงจิตอาสา</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content: Floating Profile Image with Glow -->
+                <div class="lg:col-span-5 flex justify-center" data-aos="fade-left">
+                    <div class="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 animate-float">
+                        <!-- Glowing Aura Behind -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-pink-500 via-rose-400 to-pink-300 rounded-full blur-2xl opacity-45 dark:opacity-55 animate-pulse-slow"></div>
+                        
+                        <!-- Decorative Ring -->
+                        <div class="relative w-full h-full rounded-full p-2.5 bg-gradient-to-tr from-pink-500 to-rose-400 shadow-2xl">
+                            <div class="w-full h-full rounded-full overflow-hidden bg-white dark:bg-slate-800 border-4 border-white dark:border-slate-900">
+                                <!-- Placeholder Student Portrait (Replace src with your actual photo URL) -->
+                                <img 
+                                    src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80" 
+                                    alt="นายชัชวิทย์ อังคนานิธินันท์" 
+                                    class="w-full h-full object-cover object-top"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Floating Badge 1 -->
+                        <div class="absolute -bottom-3 -left-2 sm:left-0 bg-white dark:bg-slate-900 border border-pink-100 dark:border-slate-700 px-4 py-2.5 rounded-2xl shadow-lg flex items-center gap-2.5">
+                            <div class="w-8 h-8 rounded-full bg-pink-100 dark:bg-pink-500/20 text-pink-600 dark:text-pink-400 flex items-center justify-center">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-800 dark:text-white">Physical Therapy</p>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400">Health Science Focus</p>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badge 2 -->
+                        <div class="absolute top-6 -right-3 sm:-right-5 bg-white dark:bg-slate-900 border border-pink-100 dark:border-slate-700 px-3.5 py-2 rounded-2xl shadow-lg flex items-center gap-2">
+                            <i class="fa-solid fa-flask text-pink-500"></i>
+                            <span class="text-xs font-bold text-slate-800 dark:text-white">วิทย์-คณิต ม.5</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. About Me Section -->
+    <section id="about" class="py-20 bg-white dark:bg-slate-900/50 border-y border-pink-100/60 dark:border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+                <span class="text-pink-600 dark:text-pink-400 font-semibold text-sm tracking-wider uppercase">About Me</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-1">ประวัติการศึกษาและแนวคิดการเรียนรู้</h2>
+                <div class="w-16 h-1.5 bg-gradient-to-r from-pink-500 to-rose-500 mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <!-- 2 Column Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Column 1: Education History & GPA -->
+                <div class="bg-pink-50/50 dark:bg-slate-900 border border-pink-100 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-pink-500 text-white flex items-center justify-center text-xl shadow-md shadow-pink-500/20">
+                            <i class="fa-solid fa-school"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">ประวัติการศึกษา & เป้าหมาย</h3>
+                            <p class="text-sm text-pink-600 dark:text-pink-400 font-medium">Education Background</p>
+                        </div>
+                    </div>
+
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                        ปัจจุบันกำลังศึกษาอยู่ระดับชั้นมัธยมศึกษาปีที่ 5 แผนการเรียนวิทยาศาสตร์-คณิตศาสตร์ โรงเรียนวัดไร่ขิง มีความมุ่งมั่นและสนใจอย่างลึกซึ้งด้าน <strong class="text-pink-600 dark:text-pink-400">วิทยาศาสตร์สุขภาพ (Health Sciences)</strong> โดยเฉพาะสาขากายภาพบำบัด เพื่อนำความรู้ทางวิทยาศาสตร์และนวัตกรรมมาช่วยฟื้นฟูสมรรถภาพและยกระดับคุณภาพชีวิตของผู้ป่วยในระดับสากล
+                    </p>
+
+                    <!-- GPA Breakdown Box -->
+                    <div class="bg-white dark:bg-slate-800/80 rounded-2xl p-5 border border-pink-100 dark:border-slate-700 space-y-4">
+                        <div class="flex justify-between items-center border-b border-pink-50 dark:border-slate-700 pb-3">
+                            <span class="text-sm font-medium text-slate-600 dark:text-slate-300">สถานศึกษาปัจจุบัน</span>
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">โรงเรียนวัดไร่ขิง (ม.5 วิทย์-คณิต)</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-pink-50 dark:border-slate-700 pb-3">
+                            <span class="text-sm font-medium text-slate-600 dark:text-slate-300">เกรดเฉลี่ยสะสม 4 เทอม</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-pink-100 dark:bg-pink-500/20 text-pink-700 dark:text-pink-300">3.50 (เกณฑ์มาตรฐาน)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-slate-600 dark:text-slate-300">เกรดเฉลี่ยสะสมล่าสุด (GPAX)</span>
+                            <span class="px-3 py-1 rounded-full text-sm font-bold bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-sm">3.85</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: 3 Learning Philosophies -->
+                <div class="bg-pink-50/50 dark:bg-slate-900 border border-pink-100 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-rose-500 text-white flex items-center justify-center text-xl shadow-md shadow-rose-500/20">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">แนวคิดในการเรียนรู้ 3 ข้อ</h3>
+                            <p class="text-sm text-pink-600 dark:text-pink-400 font-medium">Core Learning Mindset</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Philosophy 1 -->
+                        <div class="bg-white dark:bg-slate-800/80 p-4 rounded-2xl border border-pink-100 dark:border-slate-700 flex items-start gap-4">
+                            <div class="w-9 h-9 rounded-xl bg-pink-100 dark:bg-pink-500/20 text-pink-600 dark:text-pink-400 font-bold flex items-center justify-center shrink-0 mt-0.5">
+                                1
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white text-base">Continuous Learning</h4>
+                                <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">
+                                    ชอบเรียนรู้สิ่งใหม่ๆ และลงมือทำจริงด้วยความสงสัยใคร่รู้ (Learning through curiosity) เพื่อต่อยอดทฤษฎีสู่การปฏิบัติ
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Philosophy 2 -->
+                        <div class="bg-white dark:bg-slate-800/80 p-4 rounded-2xl border border-pink-100 dark:border-slate-700 flex items-start gap-4">
+                            <div class="w-9 h-9 rounded-xl bg-pink-100 dark:bg-pink-500/20 text-pink-600 dark:text-pink-400 font-bold flex items-center justify-center shrink-0 mt-0.5">
+                                2
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white text-base">Teamwork & Leadership</h4>
+                                <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">
+                                    ทำงานร่วมกับผู้อื่นได้ดี กล้าแสดงออก รับฟังความคิดเห็น และพร้อมเป็นผู้นำในการขับเคลื่อนเป้าหมายของทีมให้สำเร็จ
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Philosophy 3 -->
+                        <div class="bg-white dark:bg-slate-800/80 p-4 rounded-2xl border border-pink-100 dark:border-slate-700 flex items-start gap-4">
+                            <div class="w-9 h-9 rounded-xl bg-pink-100 dark:bg-pink-500/20 text-pink-600 dark:text-pink-400 font-bold flex items-center justify-center shrink-0 mt-0.5">
+                                3
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white text-base">Problem Solving</h4>
+                                <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">
+                                    คิดวิเคราะห์และแก้ปัญหาอย่างเป็นระบบ โดยใช้กระบวนการทางวิทยาศาสตร์และเหตุผลในการหาทางออกที่เหมาะสมที่สุด
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Skills & Competencies Section -->
+    <section id="skills" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+                <span class="text-pink-600 dark:text-pink-400 font-semibold text-sm tracking-wider uppercase">Skills & Competencies</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-1">ทักษะและความสามารถรอบด้าน</h2>
+                <div class="w-16 h-1.5 bg-gradient-to-r from-pink-500 to-rose-500 mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <!-- 3 Category Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Academic Skills -->
+                <div class="bg-white dark:bg-slate-900 border border-pink-100 dark:border-slate-800 rounded-3xl p-7 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 rounded-2xl bg-pink-100 dark:bg-pink-500/20 text-pink-600 dark:text-pink-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">ทักษะวิชาการ / ความถนัด</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">Academic & Scientific Aptitude</p>
+                    
+                    <ul class="space-y-3.5 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-pink-500"></i>
+                            <span>การทำโครงงานวิทยาศาสตร์และวิจัยเชิงทดลอง</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-pink-500"></i>
+                            <span>ชีววิทยาและกายวิภาคศาสตร์เบื้องต้น (Health Science)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-pink-500"></i>
+                            <span>การวิเคราะห์ข้อมูลเชิงสถิติและกระบวนการทางวิทยาศาสตร์</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-pink-500"></i>
+                            <span>การใช้อุปกรณ์ปฏิบัติการทางวิทยาศาสตร์อย่างถูกต้อง</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Digital Tools -->
+                <div class="bg-white dark:bg-slate-900 border border-pink-100 dark:border-slate-800 rounded-3xl p-7 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 rounded-2xl bg-rose-100 dark:bg-rose-500/20 text-rose-600 dark:text-rose-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">เครื่องมือดิจิทัล & เทคโนโลยี</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">Digital Tools & Productivity</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-sm font-medium mb-1.5">
+                                <span class="text-slate-700 dark:text-slate-200"><i class="fa-solid fa-palette text-pink-500 mr-2"></i>Canva (Graphic & Presentation)</span>
+                                <span class="text-pink-600 dark:text-pink-400 font-bold">95%</span>
+                            </div>
+                            <div class="w-full h-2 bg-pink-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-pink-500 to-rose-500 h-full rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm font-medium mb-1.5">
+                                <span class="text-slate-700 dark:text-slate-200"><i class="fa-brands fa-google text-pink-500 mr-2"></i>Google Workspace (Docs, Sheets, Slides)</span>
+                                <span class="text-pink-600 dark:text-pink-400 font-bold">90%</span>
+                            </div>
+                            <div class="w-full h-2 bg-pink-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-pink-500 to-rose-500 h-full rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm font-medium mb-1.5">
+                                <span class="text-slate-700 dark:text-slate-200"><i class="fa-solid fa-magnifying-glass-chart text-pink-500 mr-2"></i>การสืบค้นฐานข้อมูลวิจัย & AI Tools</span>
+                                <span class="text-pink-600 dark:text-pink-400 font-bold">85%</span>
+                            </div>
+                            <div class="w-full h-2 bg-pink-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-pink-500 to-rose-500 h-full rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Soft Skills -->
+                <div class="bg-white dark:bg-slate-900 border border-pink-100 dark:border-slate-800 rounded-3xl p-7 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 rounded-2xl bg-pink-100 dark:bg-pink-500/20 text-pink-600 dark:text-pink-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">ทักษะทางสังคม (Soft Skills)</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">Interpersonal & Communication</p>
+                    
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-3.5 py-2 rounded-xl bg-pink-50 dark:bg-slate-800 text-pink-700 dark:text-pink-300 text-sm font-medium border border-pink-100 dark:border-slate-700">
+                            <i class="fa-solid fa-microphone-lines mr-1.5"></i>การพูดในที่สาธารณะ
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl bg-pink-50 dark:bg-slate-800 text-pink-700 dark:text-pink-300 text-sm font-medium border border-pink-100 dark:border-slate-700">
+                            <i class="fa-solid fa-handshake mr-1.5"></i>การทำงานเป็นทีม
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl bg-pink-50 dark:bg-slate-800 text-pink-700 dark:text-pink-300 text-sm font-medium border border-pink-100 dark:border-slate-700">
+                            <i class="fa-solid fa-crown mr-1.5"></i>ภาวะผู้นำและกล้าตัดสินใจ
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl bg-pink-50 dark:bg-slate-800 text-pink-700 dark:text-pink-300 text-sm font-medium border border-pink-100 dark:border-slate-700">
+                            <i class="fa-solid fa-hand-holding-heart mr-1.5"></i>ความเห็นอกเห็นใจผู้อื่น (Empathy)
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl bg-pink-50 dark:bg-slate-800 text-pink-700 dark:text-pink-300 text-sm font-medium border border-pink-100 dark:border-slate-700">
+                            <i class="fa-solid fa-brain mr-1.5"></i>การปรับตัวและแก้ปัญหาเฉพาะหน้า
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Projects & Academic Works Section -->
+    <section id="projects" class="py-20 bg-white dark:bg-slate-900/50 border-y border-pink-100/60 dark:border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+                <span class="text-pink-600 dark:text-pink-400 font-semibold text-sm tracking-wider uppercase">Projects & Academic Works</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-1">โครงงานและผลงานวิชาการเด่น</h2>
+                <div class="w-16 h-1.5 bg-gradient-to-r from-pink-500 to-rose-500 mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1 (User's Main Highlight Project) -->
+                <article class="bg-pink-50/40 dark:bg-slate-900 border border-pink-100 dark:border-slate-800 rounded-3xl overflow-hidden shadow-sm card-hover flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-52 overflow-hidden bg-gradient-to-br from-pink-500 to-rose-600">
+                        <img 
+                            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" 
+                            alt="โครงงานวิชาการแก้ไขปัญหานาซ่า" 
+                            class="w-full h-full object-cover opacity-85 hover:scale-105 transition-transform duration-500"
+                        >
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/95 text-pink-600 shadow-sm">
+                                โครงงานวิชาการแก้ไขปัญหานาซ่า
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                                โครงงานนวัตกรรมแก้ไขปัญหาการทำงานของบุคคลในอวกาศ (NASA Challenge)
+                            </h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                                ศึกษาและออกแบบแนวทางแก้ไขปัญหาด้านการทำงานและสรีรวิทยาของบุคคลภายใต้สภาวะแวดล้อมจำกัด โดยประยุกต์ใช้หลักการทางวิทยาศาสตร์และการทดลองเพื่อเพิ่มประสิทธิภาพการทำงานและลดความเหนื่อยล้า
+                            </p>
+                        </div>
+                        <div>
+                            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">เครื่องมือที่ใช้:</div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-lg text-xs font-medium bg-pink-100 dark:bg-pink-500/20 text-pink-700 dark:text-pink-300">
+                                    <i class="fa-solid fa-flask-vial mr-1"></i>อุปกรณ์ทดลองทางวิทยาศาสตร์
+                                </span>
+                                <span class="px-3 py-1 rounded-lg text-xs font-medium bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-pink-100 dark:border-slate-700">
+                                    Google Workspace
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 (Complementary Health Science Project) -->
+                <article class="bg-pink-50/40 dark:bg-slate-900 border border-pink-100 dark:border-slate-800 rounded-3xl overflow-hidden shadow-sm card-hover flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-52 overflow-hidden bg-gradient-to-br from-rose-400 to-pink-500">
+                        <img 
+                            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" 
+                            alt="โครงงานวิทยาศาสตร์สุขภาพและกายภาพบำบัด" 
+                            class="w-full h-full object-cover opacity-85 hover:scale-105 transition-transform duration-500"
+                        >
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/95 text-pink-600 shadow-sm">
+                                โครงงานวิทยาศาสตร์สุขภาพ
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                                การศึกษาและประเมินท่าทางการยศาสตร์เพื่อลดอาการปวดกล้ามเนื้อ
+                            </h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                                ศึกษาความสัมพันธ์ระหว่างพฤติกรรมการนั่งเรียนและการใช้อุปกรณ์ดิจิทัลของนักเรียนระดับมัธยมศึกษา พร้อมออกแบบชุดท่าบริหารกายภาพบำบัดเบื้องต้นเพื่อป้องกันภาวะ Office Syndrome
+                            </p>
+                        </div>
+                        <div>
+                            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">เครื่องมือที่ใช้:</div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-lg text-xs font-medium bg-pink-100 dark:bg-pink-500/20 text-pink-700 dark:text-pink-300">
+                                    <i class="fa-solid fa-ruler-combined mr-1"></i>อุปกรณ์วัดมุมการเคลื่อนไหว
+                                </span>
+                                <span class="px-3 py-1 rounded-lg text-xs font-medium bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-pink-100 dark:border-slate-700">
+                                    Canva & Google Sheets
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 (Academic Competition Summary) -->
+                <article class="bg-pink-50/40 dark:bg-slate-900 border border-pink-100 dark:border-slate-800 rounded-3xl overflow-hidden shadow-sm card-hover flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-52 overflow-hidden bg-gradient-to-br from-pink-600 to-rose-500">
+                        <img 
+                            src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80" 
+                            alt="การแข่งขันทักษะทางวิทยาศาสตร์และนวัตกรรม" 
+                            class="w-full h-full object-cover opacity-85 hover:scale-105 transition-transform duration-500"
+                        >
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/95 text-pink-600 shadow-sm">
+                                ผลงานการแข่งขันวิชาการ (110 รายการ)
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                                คลังผลงานการแข่งขันตอบปัญหาวิทยาศาสตร์และทักษะกระบวนการ
+                            </h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                                รวบรวมประสบการณ์จากการเข้าร่วมแข่งขันทางวิชาการ การนำเสนอโครงงานวิทยาศาสตร์ และการทดสอบวัดระดับความรู้ทางวิทยาศาสตร์-คณิตศาสตร์ รวมกว่า 110 รายการ
+                            </p>
+                        </div>
+                        <div>
+                            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">เครื่องมือที่ใช้:</div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-lg text-xs font-medium bg-pink-100 dark:bg-pink-500/20 text-pink-700 dark:text-pink-300">
+                                    <i class="fa-solid fa-atom mr-1"></i>กระบวนการคิดวิเคราะห์
+                                </span>
+                                <span class="px-3 py-1 rounded-lg text-xs font-medium bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-pink-100 dark:border-slate-700">
+                                    Public Speaking
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Activities & Leadership Section (Timeline) -->
+    <section id="activities" class="py-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-pink-600 dark:text-pink-400 font-semibold text-sm tracking-wider uppercase">Activities & Leadership</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-1">กิจกรรม ค่ายวิชาการ และจิตอาสา (400+ ชั่วโมง)</h2>
+                <div class="w-16 h-1.5 bg-gradient-to-r from-pink-500 to-rose-500 mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <!-- Vertical Timeline -->
+            <div class="relative border-l-2 border-pink-300 dark:border-pink-700 ml-4 md:ml-8 space-y-10">
+                
+                <!-- Timeline Item 1 -->
+                <div class="relative pl-8 md:pl-10" data-aos="fade-up" data-aos-delay="100">
+                    <span class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-pink-500 ring-4 ring-pink-100 dark:ring-slate-900"></span>
+                    <div class="bg-white dark:bg-slate-900 border border-pink-100 dark:border-slate-800 rounded-2xl p-6 shadow-sm card-hover">
+                        <div class="flex flex-wrap justify-between items-center gap-2 mb-2">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-pink-100 dark:bg-pink-500/20 text-pink-600 dark:text-pink-400">
+                                ระดับชั้นมัธยมศึกษาปีที่ 5
+                            </span>
+                            <span class="text-xs font-medium text-slate-400">ค่ายวิชาการ & วิทยาศาสตร์สุขภาพ</span>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-2">
+                            เข้าร่วมค่ายแนะแนวและปฏิบัติการทางกายภาพบำบัด (Physical Therapy Camp)
+                        </h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                            เรียนรู้พื้นฐานกายวิภาคศาสตร์ ระบบกล้ามเนื้อและกระดูก การตรวจประเมินร่างกายเบื้องต้น และบทบาทของนักกายภาพบำบัดในการฟื้นฟูผู้ป่วย เพื่อเตรียมความพร้อมสู่การศึกษาต่อในระดับอุดมศึกษา
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative pl-8 md:pl-10" data-aos="fade-up" data-aos-delay="200">
+                    <span class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-rose-500 ring-4 ring-pink-100 dark:ring-slate-900"></span>
+                    <div class="bg-white dark:bg-slate-900 border border-pink-100 dark:border-slate-800 rounded-2xl p-6 shadow-sm card-hover">
+                        <div class="flex flex-wrap justify-between items-center gap-2 mb-2">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-rose-100 dark:bg-rose-500/20 text-rose-600 dark:text-rose-400">
+                                ภาวะผู้นำและกิจกรรมโรงเรียน
+                            </span>
+                            <span class="text-xs font-medium text-slate-400">โรงเรียนวัดไร่ขิง</span>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-2">
+                            แกนนำจัดกิจกรรมทางวิทยาศาสตร์และพิธีกรงานวิชาการโรงเรียน
+                        </h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                            วางแผนและประสานงานการจัดนิทรรศการสัปดาห์วิทยาศาสตร์ ฝึกฝนทักษะการพูดในที่สาธารณะ การทำงานเป็นทีม และการแก้ไขปัญหาเฉพาะหน้าได้อย่างมีประสิทธิภาพ
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative pl-8 md:pl-10" data-aos="fade-up" data-aos-delay="300">
+                    <span class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-pink-500 ring-4 ring-pink-100 dark:ring-slate-900"></span>
+                    <div class="bg-white dark:bg-slate-900 border border-pink-100 dark:border-slate-800 rounded-2xl p-6 shadow-sm card-hover">
+                        <div class="flex flex-wrap justify-between items-center gap-2 mb-2">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-pink-100 dark:bg-pink-500/20 text-pink-600 dark:text-pink-400">
+                                จิตอาสาพัฒนาสังคม (400+ ชั่วโมง)
+                            </span>
+                            <span class="text-xs font-medium text-slate-400">สาธารณประโยชน์</span>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-2">
+                            อาสาสมัครดูแลผู้สูงอายุและกิจกรรมส่งเสริมสุขภาพชุมชน
+                        </h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                            อุทิศตนร่วมกิจกรรมจิตอาสาทั้งในโรงเรียนและชุมชนรวมกว่า 400 ชั่วโมง ช่วยเหลือดูแลผู้สูงอายุและสนับสนุนงานบริการสาธารณสุข ปลูกฝังหัวใจแห่งการเป็นผู้ให้ (Service Mind) ซึ่งเป็นหัวใจสำคัญของวิชาชีพกายภาพบำบัด
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Certificates & Awards Section -->
+    <section id="certificates" class="py-20 bg-white dark:bg-slate-900/50 border-y border-pink-100/60 dark:border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+                <span class="text-pink-600 dark:text-pink-400 font-semibold text-sm tracking-wider uppercase">Certificates & Awards</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-1">เกียรติบัตรและรางวัลความภาคภูมิใจ</h2>
+                <div class="w-16 h-1.5 bg-gradient-to-r from-pink-500 to-rose-500 mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Certificate 1 -->
+                <div class="bg-pink-50/40 dark:bg-slate-900 border border-pink-100 dark:border-slate-800 rounded-3xl p-6 shadow-sm card-hover flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-pink-100 dark:bg-pink-500/20 text-pink-600 dark:text-pink-400 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                                <i class="fa-solid fa-circle-check"></i> Verified
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                            เกียรติบัตรเข้าร่วมการแข่งขันโครงงานวิชาการแก้ไขปัญหานาซ่า
+                        </h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">
+                            รับรองการนำเสนอแนวคิดนวัตกรรมและโครงงานวิทยาศาสตร์เพื่อแก้ไขปัญหาการทำงานของบุคคลภายใต้สภาวะจำกัด
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-pink-100 dark:border-slate-800 flex justify-between items-center text-xs text-slate-500 dark:text-slate-400">
+                        <span>หมวด: วิทยาศาสตร์และนวัตกรรม</span>
+                        <span class="font-semibold text-pink-600 dark:text-pink-400">ม.5</span>
+                    </div>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="bg-pink-50/40 dark:bg-slate-900 border border-pink-100 dark:border-slate-800 rounded-3xl p-6 shadow-sm card-hover flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-rose-100 dark:bg-rose-500/20 text-rose-600 dark:text-rose-400 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-medal"></i>
+                            </div>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                                <i class="fa-solid fa-circle-check"></i> Verified
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                            เกียรติบัตรผลการเรียนดีเด่น (GPAX 3.85)
+                        </h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">
+                            มอบให้แก่นักเรียนที่มีความตั้งใจเรียนและมีผลการเรียนดีเด่นในแผนการเรียนวิทยาศาสตร์-คณิตศาสตร์ โรงเรียนวัดไร่ขิง
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-pink-100 dark:border-slate-800 flex justify-between items-center text-xs text-slate-500 dark:text-slate-400">
+                        <span>หมวด: ความเป็นเลิศทางวิชาการ</span>
+                        <span class="font-semibold text-pink-600 dark:text-pink-400">โรงเรียนวัดไร่ขิง</span>
+                    </div>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="bg-pink-50/40 dark:bg-slate-900 border border-pink-100 dark:border-slate-800 rounded-3xl p-6 shadow-sm card-hover flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-pink-100 dark:bg-pink-500/20 text-pink-600 dark:text-pink-400 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-hand-holding-medical"></i>
+                            </div>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                                <i class="fa-solid fa-circle-check"></i> Verified
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                            เกียรติบัตรจิตอาสาบำเพ็ญประโยชน์ดีเด่น (400+ ชั่วโมง)
+                        </h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">
+                            รับรองการเข้าร่วมกิจกรรมจิตอาสาเพื่อสังคมและสาธารณประโยชน์อย่างต่อเนื่อง ด้วยความเสียสละและมีจิตสาธารณะ
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-pink-100 dark:border-slate-800 flex justify-between items-center text-xs text-slate-500 dark:text-slate-400">
+                        <span>หมวด: จิตอาสาและคุณธรรม</span>
+                        <span class="font-semibold text-pink-600 dark:text-pink-400">400+ Hrs</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Contact & Footer Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+                <span class="text-pink-600 dark:text-pink-400 font-semibold text-sm tracking-wider uppercase">Contact Me</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-1">ช่องทางการติดต่อและสอบถามข้อมูล</h2>
+                <div class="w-16 h-1.5 bg-gradient-to-r from-pink-500 to-rose-500 mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                
+                <!-- Left: Contact Info Cards -->
+                <div class="lg:col-span-5 space-y-5" data-aos="fade-right">
+                    <div class="bg-white dark:bg-slate-900 border border-pink-100 dark:border-slate-800 rounded-3xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">ยินดีรับคำแนะนำและโอกาสใหม่ๆ</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mb-6">
+                            หากคณะกรรมการหรือคณาจารย์ต้องการสอบถามข้อมูลเพิ่มเติมเกี่ยวกับแฟ้มสะสมผลงาน สามารถติดต่อผมได้โดยตรงผ่านช่องทางด้านล่างนี้ครับ
+                        </p>
+
+                        <div class="space-y-4">
+                            <!-- Phone -->
+                            <a href="tel:0803939439" class="flex items-center gap-4 p-3.5 rounded-2xl bg-pink-50/70 dark:bg-slate-800/80 hover:bg-pink-100 dark:hover:bg-slate-800 transition-colors">
+                                <div class="w-11 h-11 rounded-xl bg-pink-500 text-white flex items-center justify-center text-lg shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400">เบอร์โทรศัพท์ติดต่อ</p>
+                                    <p class="text-base font-bold text-slate-900 dark:text-white">080-393-9439</p>
+                                </div>
+                            </a>
+
+                            <!-- Email -->
+                            <a href="mailto:your.email@example.com" class="flex items-center gap-4 p-3.5 rounded-2xl bg-pink-50/70 dark:bg-slate-800/80 hover:bg-pink-100 dark:hover:bg-slate-800 transition-colors">
+                                <div class="w-11 h-11 rounded-xl bg-rose-500 text-white flex items-center justify-center text-lg shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400">อีเมล (Email)</p>
+                                    <p class="text-base font-bold text-slate-900 dark:text-white">your.email@example.com</p>
+                                </div>
+                            </a>
+
+                            <!-- Social Media (IG: toxic) -->
+                            <a href="https://instagram.com/toxic" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-3.5 rounded-2xl bg-pink-50/70 dark:bg-slate-800/80 hover:bg-pink-100 dark:hover:bg-slate-800 transition-colors">
+                                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-pink-500 via-rose-500 to-amber-500 text-white flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400">Instagram</p>
+                                    <p class="text-base font-bold text-slate-900 dark:text-white">@toxic</p>
+                                </div>
+                            </a>
+
+                            <!-- Portfolio Drive Link -->
+                            <a href="https://drive.google.com/?authuser=0" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-3.5 rounded-2xl bg-pink-50/70 dark:bg-slate-800/80 hover:bg-pink-100 dark:hover:bg-slate-800 transition-colors">
+                                <div class="w-11 h-11 rounded-xl bg-pink-600 text-white flex items-center justify-center text-lg shrink-0">
+                                    <i class="fa-brands fa-google-drive"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400">เอกสาร Portfolio ฉบับเต็ม</p>
+                                    <p class="text-base font-bold text-pink-600 dark:text-pink-400">เปิดดูใน Google Drive <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Interactive Contact Form -->
+                <div class="lg:col-span-7" data-aos="fade-left">
+                    <form id="contact-form" class="bg-white dark:bg-slate-900 border border-pink-100 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-sm space-y-5">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">ส่งข้อความถึงชัชวิทย์</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">กรอกข้อมูลด้านล่างเพื่อส่งข้อความสอบถามหรือนัดหมายสัมภาษณ์</p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label for="sender-name" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">ชื่อ-นามสกุล / หน่วยงาน</label>
+                                <input type="text" id="sender-name" required placeholder="ระบุชื่อของคุณ" class="w-full px-4 py-3 rounded-xl bg-pink-50/40 dark:bg-slate-800 border border-pink-200 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all">
+                            </div>
+                            <div>
+                                <label for="sender-contact" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">อีเมล หรือ เบอร์ติดต่อกลับ</label>
+                                <input type="text" id="sender-contact" required placeholder="example@email.com / 08X-XXX-XXXX" class="w-full px-4 py-3 rounded-xl bg-pink-50/40 dark:bg-slate-800 border border-pink-200 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="sender-subject" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">หัวข้อเรื่อง</label>
+                            <input type="text" id="sender-subject" required placeholder="เช่น สอบถามข้อมูลเพิ่มเติมเกี่ยวกับโครงงาน / การยื่นพอร์ต TCAS" class="w-full px-4 py-3 rounded-xl bg-pink-50/40 dark:bg-slate-800 border border-pink-200 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all">
+                        </div>
+
+                        <div>
+                            <label for="sender-message" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">ข้อความ</label>
+                            <textarea id="sender-message" rows="4" required placeholder="พิมพ์ข้อความของคุณที่นี่..." class="w-full px-4 py-3 rounded-xl bg-pink-50/40 dark:bg-slate-800 border border-pink-200 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white font-semibold shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 transition-all flex items-center justify-center gap-2 cursor-pointer">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>ส่งข้อความทันที</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-950 border-t border-pink-100 dark:border-slate-800 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-pink-500 to-rose-600 text-white font-bold text-base flex items-center justify-center">
+                    J
+                </div>
+                <span class="font-semibold text-slate-800 dark:text-slate-200">
+                    นายชัชวิทย์ อังคนานิธินันท์ (Chatchawit)
+                </span>
+            </div>
+            
+            <p class="text-sm text-slate-500 dark:text-slate-400 text-center">
+                © 2026 Chatchawit Aungkananitininan. All rights reserved. • โทร: <a href="tel:0803939439" class="text-pink-600 dark:text-pink-400 font-medium hover:underline">080-393-9439</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Floating Back-to-Top Button -->
+    <button id="back-to-top" aria-label="Back to top" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-rose-600 text-white shadow-lg shadow-pink-500/40 flex items-center justify-center opacity-0 invisible translate-y-4 transition-all duration-300 hover:scale-110 cursor-pointer">
+        <i class="fa-solid fa-arrow-up text-lg"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div id="toast-notification" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 px-6 py-4 rounded-2xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 shadow-2xl border border-pink-500/30 opacity-0 invisible translate-y-6 transition-all duration-300">
+        <div class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <div>
+            <p class="font-bold text-sm">ส่งข้อความสำเร็จเรียบร้อยแล้ว!</p>
+            <p class="text-xs text-slate-300 dark:text-slate-600">ขอบคุณที่ติดต่อเข้ามา ชัชวิทย์จะรีบติดต่อกลับโดยเร็วที่สุดครับ</p>
+        </div>
+    </div>
+
+    <!-- AOS JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // 1. Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 750,
+            once: true,
+            offset: 60,
+            easing: 'ease-out-cubic'
+        });
+
+        // 2. Dark Mode / Light Mode Toggle with localStorage
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const htmlElement = document.documentElement;
+
+        function applyTheme(theme) {
+            if (theme === 'dark') {
+                htmlElement.classList.add('dark');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                htmlElement.classList.remove('dark');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        }
+
+        // Check saved theme or system preference
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        if (savedTheme) {
+            applyTheme(savedTheme);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            applyTheme('dark');
+        } else {
+            applyTheme('light');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            const isDark = htmlElement.classList.contains('dark');
+            const newTheme = isDark ? 'light' : 'dark';
+            applyTheme(newTheme);
+            localStorage.setItem('portfolio-theme', newTheme);
+        });
+
+        // 3. Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 4. Scroll Progress Bar & Floating Back-to-Top Button
+        const scrollProgress = document.getElementById('scroll-progress');
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            
+            scrollProgress.style.width = scrollPercent + '%';
+
+            if (scrollTop > 400) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible', 'translate-y-4');
+                backToTopBtn.classList.add('opacity-100', 'visible', 'translate-y-0');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible', 'translate-y-4');
+                backToTopBtn.classList.remove('opacity-100', 'visible', 'translate-y-0');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // 5. Interactive Contact Form with Smooth Toast Notification
+        const contactForm = document.getElementById('contact-form');
+        const toastNotification = document.getElementById('toast-notification');
+        let toastTimeout;
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Show Toast
+            toastNotification.classList.remove('opacity-0', 'invisible', 'translate-y-6');
+            toastNotification.classList.add('opacity-100', 'visible', 'translate-y-0');
+
+            // Reset form
+            contactForm.reset();
+
+            // Hide Toast after 4 seconds
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toastNotification.classList.add('opacity-0', 'invisible', 'translate-y-6');
+                toastNotification.classList.remove('opacity-100', 'visible', 'translate-y-0');
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
